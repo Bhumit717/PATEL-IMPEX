@@ -75,8 +75,15 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-20">
             <Link to="/" className="flex items-center group" aria-label="Patel Impex - Home page">
-              <div className="relative">
-                <div className="text-3xl font-black bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500 animate-text-shimmer bg-size-200 bg-pos-0">
+              <div className="relative flex items-center">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 mr-3">
+                  <img 
+                    src="/lovable-uploads/7652ce88-cdfc-40b9-a234-9d32ab035bda.png" 
+                    alt="Patel Impex Logo" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="text-2xl md:text-3xl font-black bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500 animate-text-shimmer bg-size-200 bg-pos-0">
                   Patel<span className="text-slate-700">Impex</span>
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg blur-lg opacity-0 group-hover:opacity-25 transition-all duration-500" aria-hidden="true"></div>
