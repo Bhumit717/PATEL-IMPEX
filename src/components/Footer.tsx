@@ -98,15 +98,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors cursor-pointer">
                 <Mail className="h-5 w-5 text-teal-400" />
-                <span>patelimpex30@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors cursor-pointer">
-                <Mail className="h-5 w-5 text-teal-400" />
-                <span>patelimpex011@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors cursor-pointer">
-                <Mail className="h-5 w-5 text-teal-400" />
-                <span>patelimpex012@gmail.com</span>
+                <span>info@patelimpex.com</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300">
                 <Globe className="h-5 w-5 text-teal-400" />

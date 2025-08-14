@@ -48,12 +48,12 @@ const Navigation = () => {
               </div>
               <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">+91 798 41 33 417</span>
             </a>
-            <a href="mailto:patelimpex30@gmail.com" className="flex items-center space-x-2 sm:space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group" aria-label="Email Patel Impex at patelimpex30@gmail.com">
+            <a href="mailto:info@patelimpex.com" className="flex items-center space-x-2 sm:space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group" aria-label="Email Patel Impex at info@patelimpex.com">
               <div className="relative">
                 <Mail size={16} className="group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
                 <div className="absolute -inset-1 bg-teal-400 rounded-full opacity-0 group-hover:opacity-20 animate-pulse" aria-hidden="true"></div>
               </div>
-              <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">patelimpex30@gmail.com</span>
+              <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">info@patelimpex.com</span>
             </a>
             <div className="hidden lg:flex items-center space-x-3 text-blue-600 group cursor-pointer" role="text" aria-label="Company tagline">
               <Globe size={16} className="group-hover:rotate-12 transition-transform duration-300" aria-hidden="true" />
