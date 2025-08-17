@@ -1,11 +1,5 @@
 
-import { useEffect } from 'react';
-
 const Sitemap = () => {
-  useEffect(() => {
-    // Set the content type to XML
-    document.contentType = 'application/xml';
-  }, []);
 
   const sitemapXML = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
