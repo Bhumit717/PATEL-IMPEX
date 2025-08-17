@@ -92,15 +92,6 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
         />
         <p>Your browser does not support the video tag. Please upgrade to a modern browser to view our introduction video.</p>
       </video>
-      
-      {/* Skip button for accessibility */}
-      <button
-        onClick={onComplete}
-        className="absolute top-4 right-4 bg-black/50 text-white px-4 py-2 rounded-lg text-sm hover:bg-black/70 transition-colors min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-white"
-        aria-label="Skip introduction video"
-      >
-        Skip
-      </button>
     </div>
   );
 };
