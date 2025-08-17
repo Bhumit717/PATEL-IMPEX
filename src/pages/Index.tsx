@@ -15,12 +15,18 @@ const WhatsAppChat = lazy(() => import("@/components/WhatsAppChat"));
 import { useLocationTracking } from "@/hooks/useLocationTracking";
 
 const Index = () => {
-  const [showAnimation, setShowAnimation] = useState(true);
+  const [showAnimation, setShowAnimation] = useState(() => {
+    // Check if animation has been seen before
+    const hasSeenAnimation = localStorage.getItem('patel-impex-animation-seen');
+    return !hasSeenAnimation;
+  });
   
   // Track user location and send to API (deferred and optimized)
   useLocationTracking();
 
   const handleAnimationComplete = () => {
+    // Mark animation as seen in localStorage
+    localStorage.setItem('patel-impex-animation-seen', 'true');
     setShowAnimation(false);
   };
 
