@@ -11,8 +11,8 @@ const Sitemap = () => {
 
 
 <url>
-  <loc>https://patelimpex.com/</loc>
-  <lastmod>2025-08-17T10:56:33+00:00</lastmod>
+  <loc>https://patelimpex.vercel.app/</loc>
+  <lastmod>2025-07-19T12:05:07+00:00</lastmod>
 </url>
 
 
