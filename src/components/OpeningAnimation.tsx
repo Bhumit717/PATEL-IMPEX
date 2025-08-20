@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 
 const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
@@ -9,11 +8,11 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Skip animation if loading takes more than 2 seconds
+    // Skip animation if loading takes more than 4 seconds
     const loadingTimeout = setTimeout(() => {
       console.log('Video loading timeout - skipping animation');
       onComplete();
-    }, 2000);
+    }, 4000);
 
     const handleVideoEnd = () => {
       clearTimeout(loadingTimeout);
