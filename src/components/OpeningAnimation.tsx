@@ -1,63 +1,97 @@
 
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
-  const [animationEnded, setAnimationEnded] = useState(false);
+  const [videoEnded, setVideoEnded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Set animation duration to 5 seconds to allow time to view the Canva animation
-    const timer = setTimeout(() => {
-      setAnimationEnded(true);
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleVideoEnd = () => {
+      setVideoEnded(true);
       // Add a small delay before hiding to ensure smooth transition
       setTimeout(() => {
         onComplete();
       }, 300);
-    }, 5000);
+    };
 
-    return () => clearTimeout(timer);
+    const handleVideoError = (e: Event) => {
+      console.error('Video failed to load:', e);
+      // If video fails to load, skip to main content after a short delay
+      setTimeout(() => {
+        onComplete();
+      }, 1500);
+    };
+
+    const handleLoadedData = () => {
+      // Set playback rate to make video complete in exactly 3 seconds
+      const targetDuration = 3; // 3 seconds
+      if (video.duration > targetDuration) {
+        video.playbackRate = video.duration / targetDuration;
+      }
+    };
+
+    // Optimize video loading
+    const handleCanPlayThrough = () => {
+      // Video is ready to play through without buffering
+      video.play().catch(error => {
+        console.error('Video autoplay failed:', error);
+        setTimeout(() => {
+          onComplete();
+        }, 1500);
+      });
+    };
+
+    video.addEventListener('ended', handleVideoEnd);
+    video.addEventListener('error', handleVideoError);
+    video.addEventListener('loadeddata', handleLoadedData);
+    video.addEventListener('canplaythrough', handleCanPlayThrough);
+
+    return () => {
+      video.removeEventListener('ended', handleVideoEnd);
+      video.removeEventListener('error', handleVideoError);
+      video.removeEventListener('loadeddata', handleLoadedData);
+      video.removeEventListener('canplaythrough', handleCanPlayThrough);
+    };
   }, [onComplete]);
 
   return (
     <div 
       className={`fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300 ${
-        animationEnded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        videoEnded ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{ backgroundColor: '#0c0d0f' }}
       role="dialog"
-      aria-label="Company introduction animation"
+      aria-label="Company introduction video"
       aria-modal="true"
     >
-      <div className="w-full h-full max-w-4xl max-h-screen p-4">
-        <div style={{
-          position: 'relative', 
-          width: '100%', 
-          height: '0', 
-          paddingTop: '56.25%',
-          paddingBottom: '0', 
-          boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', 
-          overflow: 'hidden',
-          borderRadius: '8px', 
-          willChange: 'transform'
-        }}>
-          <iframe 
-            loading="lazy" 
-            style={{
-              position: 'absolute', 
-              width: '100%', 
-              height: '100%', 
-              top: '0', 
-              left: '0', 
-              border: 'none', 
-              padding: '0',
-              margin: '0'
-            }}
-            src="https://www.canva.com/design/DAGsXQRhYEQ/1KGY9nXFZOsHMKO9Muu-ng/watch?embed" 
-            allowFullScreen
-            allow="fullscreen"
-            aria-label="Patel Impex company introduction animation"
-          />
-        </div>
-      </div>
+      <video
+        ref={videoRef}
+        className="w-full h-full object-contain"
+        muted
+        playsInline
+        preload="metadata"
+        style={{
+          maxWidth: '100vw',
+          maxHeight: '100vh'
+        }}
+        aria-label="Patel Impex company introduction video"
+      >
+        <source 
+          src="https://files.catbox.moe/g5jvux.mp4" 
+          type="video/mp4" 
+        />
+        <track 
+          kind="captions" 
+          src="/captions/intro-en.vtt" 
+          srcLang="en" 
+          label="English captions"
+          default
+        />
+        <p>Your browser does not support the video tag. Please upgrade to a modern browser to view our introduction video.</p>
+      </video>
     </div>
   );
 };
