@@ -11,6 +11,7 @@ import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Inquiry from "./pages/Inquiry";
+import Logo from "./pages/Logo";
 // import Sitemap from "./pages/Sitemap"; // removed - serving static XML
 import NotFound from "./pages/NotFound";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/inquiry" element={<Inquiry />} />
+          <Route path="/logo" element={<Logo />} />
           {/* Sitemap is served as a static file from /public/sitemap.xml */}
           <Route path="*" element={<NotFound />} />
         </Routes>

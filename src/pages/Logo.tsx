@@ -1,7 +1,6 @@
-
 import { useState, useRef, useEffect } from "react";
 
-const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
+const Logo = () => {
   const [videoEnded, setVideoEnded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -11,18 +10,18 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
 
     const handleVideoEnd = () => {
       setVideoEnded(true);
-      // Add a small delay before hiding to ensure smooth transition
+      // Auto-replay the video after a short pause
       setTimeout(() => {
-        onComplete();
-      }, 300);
+        setVideoEnded(false);
+        video.currentTime = 0;
+        video.play().catch(error => {
+          console.error('Video replay failed:', error);
+        });
+      }, 1000);
     };
 
     const handleVideoError = (e: Event) => {
       console.error('Video failed to load:', e);
-      // If video fails to load, skip to main content after a short delay
-      setTimeout(() => {
-        onComplete();
-      }, 1500);
     };
 
     const handleLoadedData = () => {
@@ -38,9 +37,6 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
       // Video is ready to play through without buffering
       video.play().catch(error => {
         console.error('Video autoplay failed:', error);
-        setTimeout(() => {
-          onComplete();
-        }, 1500);
       });
     };
 
@@ -55,19 +51,14 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
       video.removeEventListener('loadeddata', handleLoadedData);
       video.removeEventListener('canplaythrough', handleCanPlayThrough);
     };
-  }, [onComplete]);
+  }, []);
 
   return (
     <div 
-      className={`fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300 bg-background ${
-        videoEnded ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
+      className="fixed inset-0 flex items-center justify-center"
       style={{ 
         background: 'linear-gradient(135deg, hsl(210, 11%, 4%) 0%, hsl(210, 11%, 6%) 100%)'
       }}
-      role="dialog"
-      aria-label="Company introduction video"
-      aria-modal="true"
     >
       <video
         ref={videoRef}
@@ -79,7 +70,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
           maxWidth: '100vw',
           maxHeight: '100vh'
         }}
-        aria-label="Patel Impex company introduction video"
+        aria-label="Patel Impex logo animation"
       >
         <source 
           src="/logo-animation.mp4" 
@@ -92,10 +83,10 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
           label="English captions"
           default
         />
-        <p>Your browser does not support the video tag. Please upgrade to a modern browser to view our introduction video.</p>
+        <p>Your browser does not support the video tag. Please upgrade to a modern browser to view our logo animation.</p>
       </video>
     </div>
   );
 };
 
-export default OpeningAnimation;
+export default Logo;
