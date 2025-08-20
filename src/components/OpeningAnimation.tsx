@@ -80,7 +80,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
         aria-label="Patel Impex company introduction video"
       >
         <source 
-          src="https://files.catbox.moe/g5jvux.mp4" 
+          src="/logo-animation.mp4" 
           type="video/mp4" 
         />
         <track 
