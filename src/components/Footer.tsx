@@ -1,5 +1,5 @@
 
-import { Facebook, Twitter, Linkedin, Instagram, Phone, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Phone, Mail, MapPin, Globe, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -55,10 +55,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook", color: "hover:bg-blue-600" },
-    { icon: Twitter, href: "#", label: "Twitter", color: "hover:bg-sky-500" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:bg-blue-700" },
-    { icon: Instagram, href: "#", label: "Instagram", color: "hover:bg-pink-600" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1GthjczpjL/", label: "Facebook", color: "hover:bg-blue-600" },
+    { icon: Linkedin, href: "https://www.instagram.com/patel.impex?igsh=bHhsbGlzeDQ4eGt1", label: "LinkedIn", color: "hover:bg-blue-700" },
+    { icon: Instagram, href: "https://www.instagram.com/patel.impex?igsh=bHhsbGlzeDQ4eGt1", label: "Instagram", color: "hover:bg-pink-600" },
   ];
 
   const certifications = [
