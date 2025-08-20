@@ -9,7 +9,14 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     const video = videoRef.current;
     if (!video) return;
 
+    // Skip animation if loading takes more than 2 seconds
+    const loadingTimeout = setTimeout(() => {
+      console.log('Video loading timeout - skipping animation');
+      onComplete();
+    }, 2000);
+
     const handleVideoEnd = () => {
+      clearTimeout(loadingTimeout);
       setVideoEnded(true);
       // Add a small delay before hiding to ensure smooth transition
       setTimeout(() => {
@@ -18,6 +25,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     };
 
     const handleVideoError = (e: Event) => {
+      clearTimeout(loadingTimeout);
       console.error('Video failed to load:', e);
       // If video fails to load, skip to main content after a short delay
       setTimeout(() => {
@@ -35,6 +43,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
 
     // Optimize video loading
     const handleCanPlayThrough = () => {
+      clearTimeout(loadingTimeout);
       // Video is ready to play through without buffering
       video.play().catch(error => {
         console.error('Video autoplay failed:', error);
@@ -50,6 +59,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     video.addEventListener('canplaythrough', handleCanPlayThrough);
 
     return () => {
+      clearTimeout(loadingTimeout);
       video.removeEventListener('ended', handleVideoEnd);
       video.removeEventListener('error', handleVideoError);
       video.removeEventListener('loadeddata', handleLoadedData);
@@ -63,7 +73,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
         videoEnded ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{ 
-        background: 'linear-gradient(135deg, hsl(210, 11%, 4%) 0%, hsl(210, 11%, 6%) 100%)'
+        backgroundColor: '#080A09'
       }}
       role="dialog"
       aria-label="Company introduction video"
@@ -71,13 +81,13 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     >
       <video
         ref={videoRef}
-        className="w-full h-full object-contain"
+        className="object-contain"
         muted
         playsInline
         preload="metadata"
         style={{
-          maxWidth: '100vw',
-          maxHeight: '100vh'
+          width: '50vw',
+          height: '50vh'
         }}
         aria-label="Patel Impex company introduction video"
       >

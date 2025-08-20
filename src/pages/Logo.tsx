@@ -57,18 +57,18 @@ const Logo = () => {
     <div 
       className="fixed inset-0 flex items-center justify-center"
       style={{ 
-        background: 'linear-gradient(135deg, hsl(210, 11%, 4%) 0%, hsl(210, 11%, 6%) 100%)'
+        backgroundColor: '#080A09'
       }}
     >
       <video
         ref={videoRef}
-        className="w-full h-full object-contain"
+        className="object-contain"
         muted
         playsInline
         preload="metadata"
         style={{
-          maxWidth: '100vw',
-          maxHeight: '100vh'
+          width: '50vw',
+          height: '50vh'
         }}
         aria-label="Patel Impex logo animation"
       >
