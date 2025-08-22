@@ -136,7 +136,10 @@ const Contact = () => {
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Ready to expand your business globally? Contact us today for a consultation 
-            and let us help you navigate international trade.
+            and let us help you navigate international trade. Explore our 
+            <a href="/services" className="text-ai-primary hover:underline">export services</a> and 
+            <a href="/products" className="text-ai-primary hover:underline">quality products</a> to start your 
+            <a href="/about" className="text-ai-primary hover:underline">import export business</a> journey.
           </p>
         </div>
 

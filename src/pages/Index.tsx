@@ -59,12 +59,16 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <LogoScroll />
-      <Products />
-      <About />
-      <Services />
-      <Contact />
+      <main role="main">
+        <Hero />
+        <section aria-label="Partner companies">
+          <LogoScroll />
+        </section>
+        <Products />
+        <About />
+        <Services />
+        <Contact />
+      </main>
       <Footer />
       
       {/* Lazy load WhatsApp chat with better fallback */}

@@ -74,7 +74,9 @@ const Services = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             From logistics to documentation, we provide end-to-end solutions for all your 
-            international trade requirements with unmatched expertise and reliability.
+            international trade requirements with unmatched expertise and reliability. Explore our 
+            <a href="/products" className="text-ai-primary hover:underline ml-1">export products</a> and discover why we're the 
+            <a href="/about" className="text-ai-primary hover:underline ml-1">leading import export company</a> in India.
           </p>
         </div>
 

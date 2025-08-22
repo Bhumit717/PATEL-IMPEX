@@ -66,9 +66,9 @@ const About = () => {
               
                <p className="text-xl text-gray-300 leading-relaxed animate-fade-in-up">
                  Patel Impex has been at the forefront of international trade for over 15 years. 
-                 We specialize in connecting businesses across continents, facilitating smooth 
-                 trade operations and ensuring quality products reach their destinations with 
-                 complete reliability and trust.
+                 We specialize in connecting <a href="/services" className="text-ai-primary hover:underline">import export businesses</a> across continents, facilitating smooth 
+                 trade operations and ensuring quality <a href="/products" className="text-ai-primary hover:underline">export products</a> reach their destinations with 
+                 complete reliability and trust. <a href="/contact" className="text-ai-primary hover:underline">Contact our export company</a> today.
                </p>
             </div>
 

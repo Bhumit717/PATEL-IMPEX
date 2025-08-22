@@ -82,7 +82,9 @@ const Products = () => {
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             We deal in a wide range of premium products across various industries, 
-            ensuring quality and reliability in every shipment.
+            ensuring quality and reliability in every shipment. Learn more about our 
+            <a href="/services" className="text-ai-primary hover:underline ml-1">export services</a> and 
+            <a href="/about" className="text-ai-primary hover:underline ml-1">import export company experience</a>.
           </p>
         </div>
 
