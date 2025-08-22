@@ -54,7 +54,7 @@ const About = () => {
                  </span>
               </div>
               
-              <h3 className="text-5xl lg:text-6xl font-black text-white leading-tight animate-fade-in">
+              <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight animate-fade-in">
                 Leading
                 <span className="block text-transparent bg-gradient-to-r from-ai-primary via-ai-secondary to-ai-accent bg-clip-text animate-text-shimmer bg-200%">
                   Export-Import
@@ -62,7 +62,7 @@ const About = () => {
                 <span className="block animate-typewriter overflow-hidden whitespace-nowrap border-r-2 border-ai-primary">
                   Company
                 </span>
-              </h3>
+              </h2>
               
                <p className="text-xl text-gray-300 leading-relaxed animate-fade-in-up">
                  Patel Impex has been at the forefront of international trade for over 15 years. 

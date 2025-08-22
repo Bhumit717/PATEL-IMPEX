@@ -26,13 +26,13 @@ const Hero = () => {
             <header className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-black leading-tight text-white lcp-element" id="main-heading">
                 <span className="block">
-                  Global Trade
+                  Leading Import Export Company
                 </span>
                 <span className="block text-transparent bg-gradient-to-r from-ai-primary via-ai-secondary to-ai-accent bg-clip-text">
-                  Excellence
+                  from India
                 </span>
                 <span className="block">
-                  Simplified
+                  Global Trade Solutions
                 </span>
               </h1>
             </header>
@@ -61,6 +61,18 @@ const Hero = () => {
               <Link to="/products" aria-label="View our import export products and services" className="inline-block">
                 <Button size="lg" className="bg-gradient-to-r from-ai-primary to-ai-secondary hover:from-ai-secondary hover:to-ai-accent text-white group shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 min-h-[48px] px-8" tabIndex={0}>
                   View Our Products
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
+                </Button>
+              </Link>
+              <Link to="/services" aria-label="Explore our import export services" className="inline-block">
+                <Button variant="outline" size="lg" className="border-ai-primary text-ai-primary hover:bg-ai-primary hover:text-white group shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 min-h-[48px] px-8" tabIndex={0}>
+                  Our Services
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
+                </Button>
+              </Link>
+              <Link to="/about" aria-label="Learn more about our import export company" className="inline-block">
+                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 group shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 min-h-[48px] px-8" tabIndex={0}>
+                  About Us
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
                 </Button>
               </Link>

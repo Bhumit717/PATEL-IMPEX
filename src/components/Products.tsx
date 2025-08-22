@@ -74,12 +74,12 @@ const Products = () => {
     <section id="products" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-semibold text-ai-primary mb-2 uppercase tracking-wide">
+          <div className="text-sm font-semibold text-ai-primary mb-2 uppercase tracking-wide">
             Our Products
-          </h2>
-          <h3 className="text-4xl font-bold text-white mb-4">
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-4">
             Quality Products Worldwide
-          </h3>
+          </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             We deal in a wide range of premium products across various industries, 
             ensuring quality and reliability in every shipment.
@@ -101,7 +101,7 @@ const Products = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <div className="flex items-center mb-2">
                     <category.icon className="h-6 w-6 mr-2 text-ai-primary" />
-                    <h4 className="text-xl font-semibold">{category.name}</h4>
+                    <h3 className="text-xl font-semibold">{category.name}</h3>
                   </div>
                 </div>
               </div>

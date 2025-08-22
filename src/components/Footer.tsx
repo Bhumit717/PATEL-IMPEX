@@ -29,28 +29,36 @@ const Footer = () => {
 
   const footerLinks = {
     Company: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/about" },
-      { name: "Careers", href: "#" },
-      { name: "News & Updates", href: "/blog" }
+      { name: "About Our Import Export Company", href: "/about" },
+      { name: "Our Export Services Team", href: "/about" },
+      { name: "Import Export Business History", href: "/about" },
+      { name: "Global Trade Expertise", href: "/about" },
+      { name: "Careers at Export Company", href: "/contact" },
+      { name: "Export Import News", href: "/blog" }
     ],
     Services: [
       { name: "Export Services", href: "/services" },
       { name: "Import Services", href: "/services" },
-      { name: "Logistics Solutions", href: "/services" },
-      { name: "Documentation Support", href: "/services" }
+      { name: "International Trade Solutions", href: "/services" },
+      { name: "Logistics for Import Export", href: "/services" },
+      { name: "Export Documentation", href: "/services" },
+      { name: "Import Compliance Support", href: "/services" }
     ],
     Products: [
-      { name: "Agricultural Products", href: "/products" },
-      { name: "Textiles & Garments", href: "/products" },
-      { name: "Engineering Goods", href: "/products" },
-      { name: "Gems & Jewelry", href: "/products" }
+      { name: "Agricultural Export Products", href: "/products" },
+      { name: "Textile Export Products", href: "/products" },
+      { name: "Industrial Export Goods", href: "/products" },
+      { name: "Pharmaceutical Exports", href: "/products" },
+      { name: "Chemical Export Products", href: "/products" },
+      { name: "Export Quality Gems", href: "/products" }
     ],
     Support: [
-      { name: "Contact Us", href: "/contact" },
-      { name: "Get Quote", href: "/inquiry" },
-      { name: "Track Shipment", href: "#" },
-      { name: "Help Center", href: "#" }
+      { name: "Contact Export Company", href: "/contact" },
+      { name: "Get Export Quote", href: "/inquiry" },
+      { name: "Import Export Inquiry", href: "/inquiry" },
+      { name: "Trade Support Center", href: "/contact" },
+      { name: "Export Business Help", href: "/contact" },
+      { name: "Import Export FAQs", href: "/contact" }
     ],
   };
 
@@ -122,7 +130,7 @@ const Footer = () => {
           {/* Footer Links */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h3 className="text-lg font-bold mb-6 text-white">{title}</h3>
+              <h4 className="text-lg font-bold mb-6 text-white">{title}</h4>
               <ul className="space-y-3">
                 {links.map((link, index) => (
                   <li key={index}>
@@ -144,7 +152,7 @@ const Footer = () => {
         <div className="border-t border-slate-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Our Certifications</h3>
+              <h4 className="text-lg font-bold mb-4 text-white">Our Certifications</h4>
               <div className="flex flex-wrap gap-4">
                 {certifications.map((cert, index) => (
                   <span key={index} className="bg-slate-700 text-slate-300 text-sm px-4 py-2 rounded-full hover:bg-slate-600 transition-colors">
@@ -154,7 +162,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-center md:text-right">
-              <h3 className="text-lg font-bold mb-2 text-white">Newsletter</h3>
+              <h4 className="text-lg font-bold mb-2 text-white">Newsletter</h4>
               <p className="text-slate-300 mb-4">Get trade insights & opportunities</p>
               <form onSubmit={handleNewsletterSubmit} className="flex space-x-2">
                 <input

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
    <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/Y0zFm1pF/7652ce88-cdfc-40b9-a234-9d32ab035bda.jpg" />
@@ -30,6 +30,13 @@
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     
+    <!-- Redirect for www/non-www -->
+    <script>
+      if (window.location.hostname.startsWith('www.')) {
+        window.location.replace(window.location.href.replace('www.', ''));
+      }
+    </script>
+    
     <!-- SEO optimization - Allow indexing -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
@@ -38,8 +45,8 @@
     <meta name="google-site-verification" content="XNcFltDevxwvqtyqqexhCtKIdZHx8DjixQcqRNb2ZEc" />
 
     
-    <title>Patel Impex - Global Import Export Company | Rajkot, Gujarat</title>
-    <meta name="description" content="Patel Impex - Leading import export business from Rajkot, Gujarat, India. We specialize in import and export businesses, serving as a trusted export company helping global firms with import export services worldwide." />
+    <title>Patel Impex - Leading Import Export Company | Global Trade Solutions from India</title>
+    <meta name="description" content="Patel Impex is India's premier import export company with 15+ years experience serving 1120+ global clients across 50+ countries. Expert trade solutions, ISO certified quality, and 24/7 support for your international business needs." />
     <meta name="keywords" content="import export business, import and export businesses, import export firms, export, import export, import and export, export company, import export company, company for import and export, import export co, patel impex, rajkot, gujarat, india" />
     <meta name="author" content="Patel Impex" />
     <meta name="language" content="English" />
