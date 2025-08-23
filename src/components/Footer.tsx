@@ -100,10 +100,6 @@ const Footer = () => {
                 <span>+91 (798) 41 33 417</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors cursor-pointer">
-                <Phone className="h-5 w-5 text-teal-400" />
-                <span>+91 (997) 48 73 171</span>
-              </div>
-              <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors cursor-pointer">
                 <Mail className="h-5 w-5 text-teal-400" />
                 <span>info@patelimpex.com</span>
               </div>
