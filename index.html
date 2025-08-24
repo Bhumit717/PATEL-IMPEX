@@ -154,14 +154,26 @@
       .h-full { height: 100%; }
       .object-contain { object-fit: contain; }
     </style>
+    <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+<script>
+    // Version: 2.0
+    window.Brevo = window.Brevo || [];
+    Brevo.push([
+        "init",
+        {
+            client_key: "6jyj4oqwarcuskxmqsxg5rf4",
+            // Optional: Add other initialization options, see documentation
+        }
+    ]);
+</script>
   </head>
   <body>
     <div id="root"></div>
     
     <!-- Defer main application script for better performance -->
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
     
-    <!-- Load Google Analytics and Brevo asynchronously after main content -->
+    <!-- Load Google Analytics asynchronously after main content -->
     <script>
       // Initialize Google Analytics
       window.dataLayer = window.dataLayer || [];
@@ -172,29 +184,13 @@
         page_location: window.location.href
       });
       
-      // Load scripts after page load with requestIdleCallback for better performance
-      function loadScriptsOnIdle() {
-        // Load GA script
+      // Load GA script after page load to not block rendering
+      window.addEventListener('load', function() {
         const gaScript = document.createElement('script');
         gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-VJ1WRYEGW9';
         gaScript.async = true;
-        gaScript.defer = true;
         document.head.appendChild(gaScript);
-        
-        // Load Brevo script
-        const brevoScript = document.createElement('script');
-        brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
-        brevoScript.async = true;
-        brevoScript.defer = true;
-        document.head.appendChild(brevoScript);
-      }
-      
-      // Use requestIdleCallback for better performance, fallback to setTimeout
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadScriptsOnIdle);
-      } else {
-        setTimeout(loadScriptsOnIdle, 100);
-      }
+      });
     </script>
   </body>
 </html>

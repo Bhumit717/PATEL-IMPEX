@@ -21,36 +21,21 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    minify: 'terser', // Switch to terser for better minification
+    minify: 'esbuild',
     cssCodeSplit: true,
-    sourcemap: false, // Disable sourcemaps in production for smaller files
-    target: 'es2022', // Modern target for smaller bundles
-    cssMinify: true,
+    sourcemap: true,
+    target: 'es2020', // Modern ES6+ target for better performance
     rollupOptions: {
       output: {
-        // Enhanced chunking strategy for better performance
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
-            }
-            if (id.includes('@radix-ui')) {
-              return 'ui-components';
-            }
-            if (id.includes('react-router')) {
-              return 'routing';
-            }
-            if (id.includes('@tanstack/react-query')) {
-              return 'data-fetching';
-            }
-            if (id.includes('lucide-react')) {
-              return 'icons';
-            }
-            // Group other vendor libraries
-            return 'vendor';
-          }
+        // Improved chunking strategy for better caching
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'ui-components': ['@radix-ui/react-dialog', '@radix-ui/react-popover', '@radix-ui/react-accordion'],
+          'routing': ['react-router-dom'],
+          'data-fetching': ['@tanstack/react-query'],
+          'icons': ['lucide-react'],
         },
-        // Optimized asset naming for better caching
+        // Better asset naming for caching
         assetFileNames: (assetInfo) => {
           if (!assetInfo.name) return 'assets/[name]-[hash][extname]';
           const info = assetInfo.name.split('.');
@@ -66,33 +51,19 @@ export default defineConfig(({ mode }) => ({
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
       },
-      // Tree-shaking configuration
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        unknownGlobalSideEffects: false,
-      },
     },
     // Reduce chunk size warnings threshold
-    chunkSizeWarningLimit: 500,
-    // Additional build optimizations
-    reportCompressedSize: false, // Faster builds
-    assetsInlineLimit: 4096, // Inline smaller assets
+    chunkSizeWarningLimit: 800,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'lucide-react', '@tanstack/react-query'],
     exclude: ['@tanstack/react-query-devtools'],
-    force: true, // Force optimization
   },
   // Enhanced performance optimizations
   esbuild: {
     drop: mode === 'production' ? ['console', 'debugger'] : [],
-    target: 'es2022',
+    target: 'es2020',
     legalComments: 'none',
-    treeShaking: true,
-    minifyIdentifiers: true,
-    minifySyntax: true,
-    minifyWhitespace: true,
   },
   // Add compression and caching headers configuration
   preview: {
