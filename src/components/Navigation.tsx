@@ -77,12 +77,12 @@ const Navigation = () => {
             <Link to="/" className="flex items-center group" aria-label="Patel Impex - Home page">
               <div className="relative flex items-center">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 mr-3">
-                  <img 
-                    src="/lovable-uploads/7652ce88-cdfc-40b9-a234-9d32ab035bda.png" 
-                    alt="Patel Impex Logo" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+                 <img 
+  src="/lovable-uploads/96898bcf-c878-4231-b376-a6f67d88dd34.png" 
+  alt="Patel Impex Logo" 
+  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+/>
+
                 <div className="text-2xl md:text-3xl font-black bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500 animate-text-shimmer bg-size-200 bg-pos-0">
                   Patel<span className="text-slate-700">Impex</span>
                 </div>
