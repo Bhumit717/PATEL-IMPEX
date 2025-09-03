@@ -31,6 +31,24 @@ import AgriculturalProducts from "./pages/more/AgriculturalProducts";
 import TradeFinance from "./pages/more/TradeFinance";
 import EuropeanMarkets from "./pages/more/EuropeanMarkets";
 import QualityStandards from "./pages/more/QualityStandards";
+import CertificateOfOrigin from "./pages/more/CertificateOfOrigin";
+import TextileExport from "./pages/more/TextileExport";
+import CustomsClearance from "./pages/more/CustomsClearance";
+import FreightForwarding from "./pages/more/FreightForwarding";
+import MarketResearch from "./pages/more/MarketResearch";
+import WarehouseServices from "./pages/more/WarehouseServices";
+import InsuranceServices from "./pages/more/InsuranceServices";
+import BuyerVerification from "./pages/more/BuyerVerification";
+import DigitalMarketing from "./pages/more/DigitalMarketing";
+import ComplianceTraining from "./pages/more/ComplianceTraining";
+import AfricanMarkets from "./pages/more/AfricanMarkets";
+import MiddleEastMarkets from "./pages/more/MiddleEastMarkets";
+import AmericanMarkets from "./pages/more/AmericanMarkets";
+import LegalCompliance from "./pages/more/LegalCompliance";
+import TechnologyIntegration from "./pages/more/TechnologyIntegration";
+import PackagingServices from "./pages/more/PackagingServices";
+import CertificationServices from "./pages/more/CertificationServices";
+import SupplyChainManagement from "./pages/more/SupplyChainManagement";
 
 const queryClient = new QueryClient();
 
@@ -76,6 +94,24 @@ const App = () => (
           <Route path="/more/trade-finance" element={<TradeFinance />} />
           <Route path="/more/european-markets" element={<EuropeanMarkets />} />
           <Route path="/more/quality-standards" element={<QualityStandards />} />
+          <Route path="/more/certificate-of-origin" element={<CertificateOfOrigin />} />
+          <Route path="/more/textile-export" element={<TextileExport />} />
+          <Route path="/more/customs-clearance" element={<CustomsClearance />} />
+          <Route path="/more/freight-forwarding" element={<FreightForwarding />} />
+          <Route path="/more/market-research" element={<MarketResearch />} />
+          <Route path="/more/warehouse-services" element={<WarehouseServices />} />
+          <Route path="/more/insurance-services" element={<InsuranceServices />} />
+          <Route path="/more/buyer-verification" element={<BuyerVerification />} />
+          <Route path="/more/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/more/compliance-training" element={<ComplianceTraining />} />
+          <Route path="/more/african-markets" element={<AfricanMarkets />} />
+          <Route path="/more/middle-east-markets" element={<MiddleEastMarkets />} />
+          <Route path="/more/american-markets" element={<AmericanMarkets />} />
+          <Route path="/more/legal-compliance" element={<LegalCompliance />} />
+          <Route path="/more/technology-integration" element={<TechnologyIntegration />} />
+          <Route path="/more/packaging-services" element={<PackagingServices />} />
+          <Route path="/more/certification-services" element={<CertificationServices />} />
+          <Route path="/more/supply-chain-management" element={<SupplyChainManagement />} />
           
           {/* Sitemap is served as a static file from /public/sitemap.xml */}
           <Route path="*" element={<NotFound />} />
