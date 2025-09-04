@@ -49,6 +49,40 @@ import TechnologyIntegration from "./pages/more/TechnologyIntegration";
 import PackagingServices from "./pages/more/PackagingServices";
 import CertificationServices from "./pages/more/CertificationServices";
 import SupplyChainManagement from "./pages/more/SupplyChainManagement";
+import NorthAmericanMarkets from "./pages/more/NorthAmericanMarkets";
+import SouthAmericanMarkets from "./pages/more/SouthAmericanMarkets";
+import OceaniaMarkets from "./pages/more/OceaniaMarkets";
+import EasternEuropeanMarkets from "./pages/more/EasternEuropeanMarkets";
+import CentralAsianMarkets from "./pages/more/CentralAsianMarkets";
+import SoutheastAsianMarkets from "./pages/more/SoutheastAsianMarkets";
+import NortheastAsianMarkets from "./pages/more/NortheastAsianMarkets";
+import SouthernAfricanMarkets from "./pages/more/SouthernAfricanMarkets";
+import WestAfricanMarkets from "./pages/more/WestAfricanMarkets";
+import EastAfricanMarkets from "./pages/more/EastAfricanMarkets";
+import NorthAfricanMarkets from "./pages/more/NorthAfricanMarkets";
+import GulfCooperationCouncil from "./pages/more/GulfCooperationCouncil";
+import LevantMarkets from "./pages/more/LevantMarkets";
+import ScandinavianMarkets from "./pages/more/ScandinavianMarkets";
+import MediterraneanMarkets from "./pages/more/MediterraneanMarkets";
+import BasmatiRiceExport from "./pages/more/BasmatiRiceExport";
+import NonBasmatiRiceExport from "./pages/more/NonBasmatiRiceExport";
+import WheatExport from "./pages/more/WheatExport";
+import CornExport from "./pages/more/CornExport";
+import MilletExport from "./pages/more/MilletExport";
+import BarleyExport from "./pages/more/BarleyExport";
+import TurmericExport from "./pages/more/TurmericExport";
+import CuminExport from "./pages/more/CuminExport";
+import CorianderExport from "./pages/more/CorianderExport";
+import CardamomExport from "./pages/more/CardamomExport";
+import BlackPepperExport from "./pages/more/BlackPepperExport";
+import RedChiliExport from "./pages/more/RedChiliExport";
+import GingerExport from "./pages/more/GingerExport";
+import GarlicExport from "./pages/more/GarlicExport";
+import OnionExport from "./pages/more/OnionExport";
+import CashewExport from "./pages/more/CashewExport";
+import AlmondExport from "./pages/more/AlmondExport";
+import SesameSeedsExport from "./pages/more/SesameSeedsExport";
+import SunflowerSeedsExport from "./pages/more/SunflowerSeedsExport";
 
 const queryClient = new QueryClient();
 
@@ -112,6 +146,40 @@ const App = () => (
           <Route path="/more/packaging-services" element={<PackagingServices />} />
           <Route path="/more/certification-services" element={<CertificationServices />} />
           <Route path="/more/supply-chain-management" element={<SupplyChainManagement />} />
+          <Route path="/more/north-american-markets" element={<NorthAmericanMarkets />} />
+          <Route path="/more/south-american-markets" element={<SouthAmericanMarkets />} />
+          <Route path="/more/oceania-markets" element={<OceaniaMarkets />} />
+          <Route path="/more/eastern-european-markets" element={<EasternEuropeanMarkets />} />
+          <Route path="/more/central-asian-markets" element={<CentralAsianMarkets />} />
+          <Route path="/more/southeast-asian-markets" element={<SoutheastAsianMarkets />} />
+          <Route path="/more/northeast-asian-markets" element={<NortheastAsianMarkets />} />
+          <Route path="/more/southern-african-markets" element={<SouthernAfricanMarkets />} />
+          <Route path="/more/west-african-markets" element={<WestAfricanMarkets />} />
+          <Route path="/more/east-african-markets" element={<EastAfricanMarkets />} />
+          <Route path="/more/north-african-markets" element={<NorthAfricanMarkets />} />
+          <Route path="/more/gulf-cooperation-council" element={<GulfCooperationCouncil />} />
+          <Route path="/more/levant-markets" element={<LevantMarkets />} />
+          <Route path="/more/scandinavian-markets" element={<ScandinavianMarkets />} />
+          <Route path="/more/mediterranean-markets" element={<MediterraneanMarkets />} />
+          <Route path="/more/basmati-rice-export" element={<BasmatiRiceExport />} />
+          <Route path="/more/non-basmati-rice-export" element={<NonBasmatiRiceExport />} />
+          <Route path="/more/wheat-export" element={<WheatExport />} />
+          <Route path="/more/corn-export" element={<CornExport />} />
+          <Route path="/more/millet-export" element={<MilletExport />} />
+          <Route path="/more/barley-export" element={<BarleyExport />} />
+          <Route path="/more/turmeric-export" element={<TurmericExport />} />
+          <Route path="/more/cumin-export" element={<CuminExport />} />
+          <Route path="/more/coriander-export" element={<CorianderExport />} />
+          <Route path="/more/cardamom-export" element={<CardamomExport />} />
+          <Route path="/more/black-pepper-export" element={<BlackPepperExport />} />
+          <Route path="/more/red-chili-export" element={<RedChiliExport />} />
+          <Route path="/more/ginger-export" element={<GingerExport />} />
+          <Route path="/more/garlic-export" element={<GarlicExport />} />
+          <Route path="/more/onion-export" element={<OnionExport />} />
+          <Route path="/more/cashew-export" element={<CashewExport />} />
+          <Route path="/more/almond-export" element={<AlmondExport />} />
+          <Route path="/more/sesame-seeds-export" element={<SesameSeedsExport />} />
+          <Route path="/more/sunflower-seeds-export" element={<SunflowerSeedsExport />} />
           
           {/* Sitemap is served as a static file from /public/sitemap.xml */}
           <Route path="*" element={<NotFound />} />
