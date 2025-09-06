@@ -71,8 +71,7 @@ const Footer = () => {
   const certifications = [
     "ISO 9001:2015 Certified",
     "Export House Certificate", 
-    "FSSAI Licensed",
-    "Government Recognized"
+    "FSSAI Licensed"
   ];
 
   return (
@@ -188,10 +187,10 @@ const Footer = () => {
               © 2024 Patel Impex Pvt. Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Privacy Policy</a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Cookie Policy</a>
-              <a href="/contact" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Contact</a>
+              <Link to="/privacy-policy" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Terms of Service</Link>
+              <Link to="/cookie-policy" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Cookie Policy</Link>
+              <Link to="/contact" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Contact</Link>
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-slate-700">
