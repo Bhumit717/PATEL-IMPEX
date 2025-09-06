@@ -79,9 +79,9 @@ const Navigation = () => {
               <div className="relative flex items-center">
                 <div className="w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 mr-2 md:mr-3">
                   <img 
-                    src="/lovable-uploads/96898bcf-c878-4231-b376-a6f67d88dd34.png" 
+                    src="/lovable-uploads/9441ee54-1129-4a42-899b-fae2056a0aec.png" 
                     alt="Patel Impex Logo" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 bg-white p-1"
                   />
                 </div>
                 <div className="text-xl md:text-3xl font-black bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500 animate-text-shimmer bg-size-200 bg-pos-0">
