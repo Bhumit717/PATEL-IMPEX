@@ -662,14 +662,28 @@ const FAQ = () => {
                         </button>
                         {openFAQ === globalIndex && (
                           <div className="p-6 bg-white border-t border-slate-200">
-                            <p className="text-slate-600 leading-relaxed mb-4">{faq.answer}</p>
+                             <p className="text-slate-600 leading-relaxed mb-4">{faq.answer}</p>
                             <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-4 rounded-xl border-l-4 border-blue-500">
-                              <p className="text-blue-800 font-semibold">
+                              <p className="text-blue-800 font-semibold mb-3">
                                 For direct export inquiries, contact{" "}
-                                <Link to="/" className="text-blue-600 hover:text-blue-800 underline font-bold">
+                                <Link to="/contact" className="text-blue-600 hover:text-blue-800 underline font-bold">
                                   Patel Impex
                                 </Link>
                               </p>
+                              <div className="flex flex-wrap gap-2">
+                                <Link to="/services" className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200 transition-colors">
+                                  Our Services
+                                </Link>
+                                <Link to="/products" className="text-sm bg-teal-100 text-teal-700 px-3 py-1 rounded-full hover:bg-teal-200 transition-colors">
+                                  Products
+                                </Link>
+                                <Link to="/more" className="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full hover:bg-purple-200 transition-colors">
+                                  Export Guides
+                                </Link>
+                                <Link to="/inquiry" className="text-sm bg-orange-100 text-orange-700 px-3 py-1 rounded-full hover:bg-orange-200 transition-colors">
+                                  Get Quote
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         )}
