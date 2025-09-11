@@ -1,62 +1,51 @@
-
 import { Truck, Ship, Plane, FileText, Shield, Clock, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
 const Services = () => {
-  const services = [
-    {
-      icon: Ship,
-      title: "Sea Freight",
-      description: "Cost-effective ocean shipping solutions for bulk cargo and containers worldwide with complete tracking.",
-      features: ["Container Shipping", "Bulk Cargo", "Port-to-Port", "Door-to-Door"],
-      color: "from-ai-primary to-ai-secondary",
-      hoverColor: "group-hover:bg-ai-primary/10",
-    },
-    {
-      icon: Plane,
-      title: "Air Freight",
-      description: "Fast and reliable air cargo services for time-sensitive shipments with priority handling.",
-      features: ["Express Delivery", "Temperature Control", "Dangerous Goods", "Charter Services"],
-      color: "from-ai-secondary to-ai-accent",
-      hoverColor: "group-hover:bg-ai-secondary/10",
-    },
-    {
-      icon: Truck,
-      title: "Land Transport",
-      description: "Comprehensive road and rail transportation across continents with real-time monitoring.",
-      features: ["Road Transport", "Rail Freight", "Cross-border", "Last Mile Delivery"],
-      color: "from-ai-accent to-ai-cyber",
-      hoverColor: "group-hover:bg-ai-accent/10",
-    },
-    {
-      icon: FileText,
-      title: "Documentation",
-      description: "Complete trade documentation and customs clearance services with expert compliance support.",
-      features: ["Customs Clearance", "Trade Documents", "Compliance", "Insurance"],
-      color: "from-ai-cyber to-ai-neon",
-      hoverColor: "group-hover:bg-ai-cyber/10",
-    },
-    {
-      icon: Shield,
-      title: "Quality Control",
-      description: "Rigorous quality inspection and assurance for all shipments with detailed reporting.",
-      features: ["Pre-shipment Inspection", "Quality Testing", "Certification", "Compliance Check"],
-      color: "from-ai-neon to-ai-primary",
-      hoverColor: "group-hover:bg-ai-neon/10",
-    },
-    {
-      icon: Clock,
-      title: "24/7 Support",
-      description: "Round-the-clock customer support and shipment tracking with dedicated account managers.",
-      features: ["Live Tracking", "Customer Support", "Emergency Response", "Real-time Updates"],
-      color: "from-ai-primary to-ai-accent",
-      hoverColor: "group-hover:bg-ai-primary/10",
-    },
-  ];
-
-  return (
-    <section id="services" className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+  const services = [{
+    icon: Ship,
+    title: "Sea Freight",
+    description: "Cost-effective ocean shipping solutions for bulk cargo and containers worldwide with complete tracking.",
+    features: ["Container Shipping", "Bulk Cargo", "Port-to-Port", "Door-to-Door"],
+    color: "from-ai-primary to-ai-secondary",
+    hoverColor: "group-hover:bg-ai-primary/10"
+  }, {
+    icon: Plane,
+    title: "Air Freight",
+    description: "Fast and reliable air cargo services for time-sensitive shipments with priority handling.",
+    features: ["Express Delivery", "Temperature Control", "Dangerous Goods", "Charter Services"],
+    color: "from-ai-secondary to-ai-accent",
+    hoverColor: "group-hover:bg-ai-secondary/10"
+  }, {
+    icon: Truck,
+    title: "Land Transport",
+    description: "Comprehensive road and rail transportation across continents with real-time monitoring.",
+    features: ["Road Transport", "Rail Freight", "Cross-border", "Last Mile Delivery"],
+    color: "from-ai-accent to-ai-cyber",
+    hoverColor: "group-hover:bg-ai-accent/10"
+  }, {
+    icon: FileText,
+    title: "Documentation",
+    description: "Complete trade documentation and customs clearance services with expert compliance support.",
+    features: ["Customs Clearance", "Trade Documents", "Compliance", "Insurance"],
+    color: "from-ai-cyber to-ai-neon",
+    hoverColor: "group-hover:bg-ai-cyber/10"
+  }, {
+    icon: Shield,
+    title: "Quality Control",
+    description: "Rigorous quality inspection and assurance for all shipments with detailed reporting.",
+    features: ["Pre-shipment Inspection", "Quality Testing", "Certification", "Compliance Check"],
+    color: "from-ai-neon to-ai-primary",
+    hoverColor: "group-hover:bg-ai-neon/10"
+  }, {
+    icon: Clock,
+    title: "24/7 Support",
+    description: "Round-the-clock customer support and shipment tracking with dedicated account managers.",
+    features: ["Live Tracking", "Customer Support", "Emergency Response", "Real-time Updates"],
+    color: "from-ai-primary to-ai-accent",
+    hoverColor: "group-hover:bg-ai-primary/10"
+  }];
+  return <section id="services" className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 bg-gray-800/80 border border-ai-primary/30 rounded-full mb-6">
@@ -81,8 +70,7 @@ const Services = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-ai-primary/20 shadow-lg bg-gray-800/50 backdrop-blur-sm relative overflow-hidden">
+          {services.map((service, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-ai-primary/20 shadow-lg bg-gray-800/50 backdrop-blur-sm relative overflow-hidden">
               {/* Static gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
               
@@ -102,12 +90,10 @@ const Services = () => {
               
               <CardContent className="relative z-10 pt-0">
                 <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300 hover:text-ai-primary transition-colors duration-300">
+                  {service.features.map((feature, idx) => <li key={idx} className="flex items-center text-gray-300 hover:text-ai-primary transition-colors duration-300">
                       <div className="w-2 h-2 bg-gradient-to-r from-ai-primary to-ai-secondary rounded-full mr-3 flex-shrink-0"></div>
                       <span className="font-medium">{feature}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <Button variant="ghost" className="w-full group/btn justify-between hover:bg-ai-primary/10 transition-all duration-300 text-white border border-ai-primary/30">
@@ -115,28 +101,14 @@ const Services = () => {
                   <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Call to action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-ai-primary to-ai-secondary rounded-3xl p-12 text-white relative overflow-hidden">
-            <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="text-xl mb-8 text-gray-100">
-                Contact us today for a personalized consultation and quote.
-              </p>
-              <Button size="lg" className="bg-white text-ai-primary hover:bg-gray-100 font-bold transform hover:scale-105 transition-all duration-300">
-                Get Free Quote
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
