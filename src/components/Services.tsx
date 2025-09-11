@@ -65,18 +65,16 @@ const Services = () => {
             </span>
           </div>
           
-          <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+          <h3 className="text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
             Comprehensive
             <span className="block text-transparent bg-gradient-to-r from-ai-primary via-ai-secondary to-ai-accent bg-clip-text">
               Trade Solutions
             </span>
-          </h2>
+          </h3>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             From logistics to documentation, we provide end-to-end solutions for all your 
-            international trade requirements with unmatched expertise and reliability. Explore our 
-            <a href="/products" className="text-ai-primary hover:underline ml-1">export products</a> and discover why we're the 
-            <a href="/about" className="text-ai-primary hover:underline ml-1">leading import export company</a> in India.
+            international trade requirements with unmatched expertise and reliability.
           </p>
         </div>
 
@@ -91,9 +89,9 @@ const Services = () => {
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-ai-primary transition-colors duration-300">
+                <CardTitle className="text-2xl font-bold text-white mb-3 group-hover:text-ai-primary transition-colors duration-300">
                   {service.title}
-                </h3>
+                </CardTitle>
                 
                 <CardDescription className="text-gray-300 text-base leading-relaxed">
                   {service.description}
@@ -123,7 +121,7 @@ const Services = () => {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-ai-primary to-ai-secondary rounded-3xl p-12 text-white relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
+              <h4 className="text-3xl font-bold mb-4">Ready to Get Started?</h4>
               <p className="text-xl mb-8 text-gray-100">
                 Contact us today for a personalized consultation and quote.
               </p>
