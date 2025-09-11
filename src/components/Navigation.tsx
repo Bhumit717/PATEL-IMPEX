@@ -16,6 +16,7 @@ const Navigation = () => {
     { name: "Services", href: "/services" },
     { name: "Products", href: "/products" },
     { name: "Blog", href: "/blog" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -37,7 +38,7 @@ const Navigation = () => {
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-2xl' : 'bg-white'}`} role="banner">
       {/* Ultra Pro Contact Bar with Advanced Animations */}
-      <div className="bg-gradient-to-r from-blue-50 via-teal-50 to-blue-50 text-slate-700 py-3 px-4 border-b border-blue-100 relative overflow-hidden" role="complementary" aria-label="Contact information and certifications">
+      <div className="bg-gradient-to-r from-blue-50 via-teal-50 to-blue-50 text-slate-700 py-2 md:py-3 px-4 border-b border-blue-100 relative overflow-hidden" role="complementary" aria-label="Contact information and certifications">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" aria-hidden="true"></div>
         <div className="container mx-auto flex justify-between items-center text-sm relative z-10">
           <div className="flex items-center flex-wrap gap-2 sm:gap-8">
@@ -48,12 +49,12 @@ const Navigation = () => {
               </div>
               <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">+91 798 41 33 417</span>
             </a>
-            <a href="mailto:patelimpex30@gmail.com" className="flex items-center space-x-2 sm:space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group" aria-label="Email Patel Impex at patelimpex30@gmail.com">
+            <a href="mailto:info@patelimpex.com" className="flex items-center space-x-2 sm:space-x-3 hover:text-blue-600 transition-all duration-300 cursor-pointer group" aria-label="Email Patel Impex at info@patelimpex.com">
               <div className="relative">
                 <Mail size={16} className="group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
                 <div className="absolute -inset-1 bg-teal-400 rounded-full opacity-0 group-hover:opacity-20 animate-pulse" aria-hidden="true"></div>
               </div>
-              <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">patelimpex30@gmail.com</span>
+              <span className="font-semibold group-hover:font-bold transition-all duration-300 whitespace-nowrap">info@patelimpex.com</span>
             </a>
             <div className="hidden lg:flex items-center space-x-3 text-blue-600 group cursor-pointer" role="text" aria-label="Company tagline">
               <Globe size={16} className="group-hover:rotate-12 transition-transform duration-300" aria-hidden="true" />
@@ -73,10 +74,17 @@ const Navigation = () => {
       {/* Ultra Pro Main Navigation */}
       <nav className="bg-white/95 backdrop-blur-sm relative" role="navigation" aria-label="Main navigation">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16 md:h-20">
             <Link to="/" className="flex items-center group" aria-label="Patel Impex - Home page">
-              <div className="relative">
-                <div className="text-3xl font-black bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500 animate-text-shimmer bg-size-200 bg-pos-0">
+              <div className="relative flex items-center">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 mr-2 md:mr-3">
+                  <img 
+                    src="/lovable-uploads/9441ee54-1129-4a42-899b-fae2056a0aec.png" 
+                    alt="Patel Impex Logo" 
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 bg-white p-1"
+                  />
+                </div>
+                <div className="text-xl md:text-3xl font-black bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500 animate-text-shimmer bg-size-200 bg-pos-0">
                   Patel<span className="text-slate-700">Impex</span>
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg blur-lg opacity-0 group-hover:opacity-25 transition-all duration-500" aria-hidden="true"></div>

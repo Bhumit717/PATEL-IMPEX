@@ -16,7 +16,7 @@ const About = () => {
   ];
 
   const openWhatsApp = () => {
-    const phoneNumber = "919974873171";
+    const phoneNumber = "917984133417";
     const message = "Hi, I am...";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -54,7 +54,7 @@ const About = () => {
                  </span>
               </div>
               
-              <h3 className="text-5xl lg:text-6xl font-black text-white leading-tight animate-fade-in">
+              <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight animate-fade-in">
                 Leading
                 <span className="block text-transparent bg-gradient-to-r from-ai-primary via-ai-secondary to-ai-accent bg-clip-text animate-text-shimmer bg-200%">
                   Export-Import
@@ -62,13 +62,13 @@ const About = () => {
                 <span className="block animate-typewriter overflow-hidden whitespace-nowrap border-r-2 border-ai-primary">
                   Company
                 </span>
-              </h3>
+              </h2>
               
                <p className="text-xl text-gray-300 leading-relaxed animate-fade-in-up">
                  Patel Impex has been at the forefront of international trade for over 15 years. 
-                 We specialize in connecting businesses across continents, facilitating smooth 
-                 trade operations and ensuring quality products reach their destinations with 
-                 complete reliability and trust.
+                 We specialize in connecting <a href="/services" className="text-ai-primary hover:underline">import export businesses</a> across continents, facilitating smooth 
+                 trade operations and ensuring quality <a href="/products" className="text-ai-primary hover:underline">export products</a> reach their destinations with 
+                 complete reliability and trust. <a href="/contact" className="text-ai-primary hover:underline">Contact our export company</a> today.
                </p>
             </div>
 

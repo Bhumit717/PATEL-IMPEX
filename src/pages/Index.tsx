@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import OpeningAnimation from "@/components/OpeningAnimation";
 import LogoScroll from "@/components/LogoScroll";
+import TranslationBanner from "@/components/TranslationBanner";
 
 // Lazy load non-critical components for better performance
 const WhatsAppChat = lazy(() => import("@/components/WhatsAppChat"));
@@ -58,13 +59,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <TranslationBanner />
       <Navigation />
-      <Hero />
-      <LogoScroll />
-      <Products />
-      <About />
-      <Services />
-      <Contact />
+      <main role="main">
+        <Hero />
+        <section aria-label="Partner companies">
+          <LogoScroll />
+        </section>
+        <Products />
+        <About />
+        <Services />
+        <Contact />
+      </main>
       <Footer />
       
       {/* Lazy load WhatsApp chat with better fallback */}

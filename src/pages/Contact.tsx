@@ -114,12 +114,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 (798) 41 33 417", "+91 (997) 48 73 171"],
+      details: ["+91 (798) 41 33 417"],
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["patelimpex30@gmail.com", "patelimpex011@gmail.com", "patelimpex012@gmail.com"],
+      details: ["info@patelimpex.com"],
     },
     {
       icon: Clock,

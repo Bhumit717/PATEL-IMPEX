@@ -107,7 +107,7 @@ const Blog = () => {
 • Date: ${new Date().toLocaleString()}
 • Location: Trade Insights Blog
 
-📍 Website: https://patelimpex.vercel.app/blog`;
+📍 Website: https://patelimpex.com/blog`;
 
       const apiUrl1 = `https://api.callmebot.com/text.php?source=web&user=@bhumitnasit&text=${encodeURIComponent(message)}`;
       const apiUrl2 = `https://api.callmebot.com/text.php?source=web&user=@PATEL111206&text=${encodeURIComponent(message)}`;

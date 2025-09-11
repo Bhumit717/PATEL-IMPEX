@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 
 const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
@@ -9,7 +8,14 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     const video = videoRef.current;
     if (!video) return;
 
+    // Skip animation if loading takes more than 4 seconds
+    const loadingTimeout = setTimeout(() => {
+      console.log('Video loading timeout - skipping animation');
+      onComplete();
+    }, 4000);
+
     const handleVideoEnd = () => {
+      clearTimeout(loadingTimeout);
       setVideoEnded(true);
       // Add a small delay before hiding to ensure smooth transition
       setTimeout(() => {
@@ -18,6 +24,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     };
 
     const handleVideoError = (e: Event) => {
+      clearTimeout(loadingTimeout);
       console.error('Video failed to load:', e);
       // If video fails to load, skip to main content after a short delay
       setTimeout(() => {
@@ -35,6 +42,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
 
     // Optimize video loading
     const handleCanPlayThrough = () => {
+      clearTimeout(loadingTimeout);
       // Video is ready to play through without buffering
       video.play().catch(error => {
         console.error('Video autoplay failed:', error);
@@ -50,6 +58,7 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
     video.addEventListener('canplaythrough', handleCanPlayThrough);
 
     return () => {
+      clearTimeout(loadingTimeout);
       video.removeEventListener('ended', handleVideoEnd);
       video.removeEventListener('error', handleVideoError);
       video.removeEventListener('loadeddata', handleLoadedData);
@@ -59,28 +68,30 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
 
   return (
     <div 
-      className={`fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-300 bg-background ${
         videoEnded ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
-      style={{ backgroundColor: '#0c0d0f' }}
+      style={{ 
+        backgroundColor: '#080A09'
+      }}
       role="dialog"
       aria-label="Company introduction video"
       aria-modal="true"
     >
       <video
         ref={videoRef}
-        className="w-full h-full object-contain"
+        className="object-contain"
         muted
         playsInline
         preload="metadata"
         style={{
-          maxWidth: '100vw',
-          maxHeight: '100vh'
+          width: '50vw',
+          height: '50vh'
         }}
         aria-label="Patel Impex company introduction video"
       >
         <source 
-          src="https://files.catbox.moe/g5jvux.mp4" 
+          src="/logo-animation.mp4" 
           type="video/mp4" 
         />
         <track 
@@ -92,15 +103,6 @@ const OpeningAnimation = ({ onComplete }: { onComplete: () => void }) => {
         />
         <p>Your browser does not support the video tag. Please upgrade to a modern browser to view our introduction video.</p>
       </video>
-      
-      {/* Skip button for accessibility */}
-      <button
-        onClick={onComplete}
-        className="absolute top-4 right-4 bg-black/50 text-white px-4 py-2 rounded-lg text-sm hover:bg-black/70 transition-colors min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-white"
-        aria-label="Skip introduction video"
-      >
-        Skip
-      </button>
     </div>
   );
 };

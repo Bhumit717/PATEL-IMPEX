@@ -110,7 +110,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 (798) 41 33 417", "+91 (997) 48 73 171"],
+      details: ["+91 (798) 41 33 417"],
     },
     {
       icon: Mail,
@@ -128,15 +128,18 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-semibold text-ai-primary mb-2 uppercase tracking-wide">
+          <div className="text-sm font-semibold text-ai-primary mb-2 uppercase tracking-wide">
             Contact Us
-          </h2>
-          <h3 className="text-4xl font-bold text-white mb-4">
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-4">
             Get In Touch
-          </h3>
+          </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Ready to expand your business globally? Contact us today for a consultation 
-            and let us help you navigate international trade.
+            and let us help you navigate international trade. Explore our 
+            <a href="/services" className="text-ai-primary hover:underline">export services</a> and 
+            <a href="/products" className="text-ai-primary hover:underline">quality products</a> to start your 
+            <a href="/about" className="text-ai-primary hover:underline">import export business</a> journey.
           </p>
         </div>
 
@@ -193,7 +196,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="bg-gray-800/50 border-ai-primary/20 shadow-xl">
             <CardHeader>
-              <CardTitle className="text-2xl text-white">Send Message</CardTitle>
+              <h3 className="text-2xl text-white">Send Message</h3>
             </CardHeader>
             <CardContent className="space-y-6">
               <form onSubmit={handleSubmit}>

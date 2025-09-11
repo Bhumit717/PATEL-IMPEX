@@ -26,9 +26,15 @@ const LogoScroll = () => {
   return (
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-foreground">
-          Trusted by Leading Global Importers
-        </h2>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            Trusted by Leading Global Import Export Companies
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Partnering with top <a href="/about" className="text-primary hover:underline">import export businesses</a> and 
+            <a href="/services" className="text-primary hover:underline ml-1">export companies</a> worldwide
+          </p>
+        </div>
         <div className="relative overflow-hidden">
           <div className="flex animate-scroll-fast">
             {/* First set of logos */}
