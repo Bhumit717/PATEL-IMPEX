@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppChat from "@/components/WhatsAppChat";
+import RelatedLinks from "@/components/RelatedLinks";
 import { Calendar, Globe, TrendingUp, Users, Award, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -35,12 +36,14 @@ const DatesExport = () => {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center mb-16">
               <Link to="/contact" className="inline-flex items-center space-x-3 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl">
                 <Users className="h-6 w-6" />
                 <span>Export Dates Globally</span>
               </Link>
             </div>
+
+            <RelatedLinks currentPage="/seo/dates-export" category="products" />
           </div>
         </main>
 
