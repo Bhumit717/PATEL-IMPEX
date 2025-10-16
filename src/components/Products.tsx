@@ -1,6 +1,15 @@
-import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, Pill, Tractor, Package, Leaf, Recycle } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, Pill, Tractor, Package, Leaf, Recycle, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const Products = () => {
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
+  };
+
   const categories = [
     {
       icon: Wheat,
@@ -222,46 +231,60 @@ const Products = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 border border-ai-primary/20 hover:border-ai-primary/40">
-                <img
-                  src={category.image}
-                  alt={`${category.name} - Import export business products from Patel Impex export company`}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <div className="flex items-center mb-2">
-                    <category.icon className="h-6 w-6 mr-2 text-ai-primary" />
-                    <h3 className="text-xl font-semibold">{category.name}</h3>
+            <div key={index} className="space-y-4">
+              <div 
+                className="group cursor-pointer"
+                onClick={() => toggleCategory(category.name)}
+              >
+                <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 border border-ai-primary/20 hover:border-ai-primary/40">
+                  <img
+                    src={category.image}
+                    alt={`${category.name} - Import export business products from Patel Impex export company`}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center">
+                        <category.icon className="h-6 w-6 mr-2 text-ai-primary" />
+                        <h3 className="text-xl font-semibold">{category.name}</h3>
+                      </div>
+                      {expandedCategory === category.name ? (
+                        <ChevronUp className="h-5 w-5 text-ai-primary" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 text-ai-primary" />
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gray-800/50 p-6 rounded-b-lg shadow-lg -mt-4 relative z-10 border-x border-b border-ai-primary/20 backdrop-blur-sm">
-                <h4 className="text-lg font-semibold text-white mb-4">Featured Products</h4>
-                <div className="grid grid-cols-2 gap-3">
-                  {category.products && category.products.slice(0, 10).map((product, idx) => (
-                    <a 
-                      key={idx} 
-                      href={product.link}
-                      className="group/product relative overflow-hidden rounded-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      <img 
-                        src={product.image} 
-                        alt={product.name}
-                        className="w-full h-24 object-cover group-hover/product:scale-110 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
-                        <span className="text-xs text-white p-2 w-full truncate">{product.name}</span>
-                      </div>
-                    </a>
-                  ))}
+              {expandedCategory === category.name && (
+                <div className="bg-gray-800/50 p-6 rounded-lg shadow-lg border border-ai-primary/20 backdrop-blur-sm animate-in slide-in-from-top-2">
+                  <h4 className="text-lg font-semibold text-white mb-4">Featured Products</h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    {category.products && category.products.slice(0, 10).map((product, idx) => (
+                      <Link 
+                        key={idx} 
+                        to={product.link}
+                        className="group/product relative overflow-hidden rounded-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-24 object-cover group-hover/product:scale-110 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
+                          <span className="text-xs text-white p-2 w-full truncate">{product.name}</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
