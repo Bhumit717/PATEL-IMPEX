@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, Pill, Tractor, Package, Leaf, Recycle, ArrowRight, TrendingUp, Globe, Star, Eye, Download, MessageCircle, Phone, Mail, MapPin, Calendar, Award, CheckCircle, Users, Target, Zap, Sparkles, Heart, ThumbsUp, Clock, Shield, Calculator, Truck } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Wheat, Wrench, Shirt, Coffee, Gem, Cpu, Pill, Tractor, Package, Leaf, Recycle, ArrowRight, TrendingUp, Globe, Star, Eye, Download, MessageCircle, Phone, Mail, MapPin, Calendar, Award, CheckCircle, Users, Target, Zap, Sparkles, Heart, ThumbsUp, Clock, Shield, Calculator, Truck, ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
@@ -8,6 +9,11 @@ import { Helmet } from "react-helmet";
 
 const Products = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+
+  const toggleCategory = (categoryName: string) => {
+    setExpandedCategory(expandedCategory === categoryName ? null : categoryName);
+  };
 
   useEffect(() => {
     // Auto-rotate testimonials
@@ -166,7 +172,19 @@ startxref
       price: "85.99",
       currency: "USD",
       rating: 4.7,
-      reviewCount: 98
+      reviewCount: 98,
+      products: [
+        { name: "Pharmaceutical Tablets", image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80", link: "/seo/pharmaceutical-export" },
+        { name: "Medical Syringes", image: "https://images.unsplash.com/photo-1579154341276-d5e3e1c3cddb?auto=format&fit=crop&w=300&q=80", link: "/seo/pharmaceutical-export" },
+        { name: "Organic Pesticides", image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Bio Fertilizers", image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Veterinary Medicines", image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Health Capsules", image: "https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Surgical Equipment", image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=300&q=80", link: "/seo/pharmaceutical-export" },
+        { name: "Diagnostic Kits", image: "https://images.unsplash.com/photo-1584536195913-9c0bec826de9?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Herbal Supplements", image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Medical Gloves", image: "https://images.unsplash.com/photo-1585503418537-88331351ad99?auto=format&fit=crop&w=300&q=80", link: "/products" },
+      ],
     },
     {
       icon: Tractor,
@@ -181,7 +199,19 @@ startxref
       price: "12999.99",
       currency: "USD",
       rating: 4.6,
-      reviewCount: 67
+      reviewCount: 67,
+      products: [
+        { name: "Mini Tractor", image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Combine Harvester", image: "https://images.unsplash.com/photo-1595503240812-7286dafaddc1?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Drip Irrigation Kit", image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Cultivator Machine", image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Sprinkler System", image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Seeding Machine", image: "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Power Tiller", image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Thresher Equipment", image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Farm Trailer", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Hand Tools Set", image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=300&q=80", link: "/products" },
+      ],
     },
     {
       icon: Shirt,
@@ -196,7 +226,19 @@ startxref
       price: "45.99",
       currency: "USD",
       rating: 4.9,
-      reviewCount: 243
+      reviewCount: 243,
+      products: [
+        { name: "Cotton Fabric", image: "https://images.unsplash.com/photo-1610464620283-3e4f7c76f8b8?auto=format&fit=crop&w=300&q=80", link: "/seo/cotton-export-services" },
+        { name: "Silk Sarees", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=300&q=80", link: "/more/textile-export" },
+        { name: "Men's T-Shirts", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80", link: "/more/textile-export" },
+        { name: "Bed Linen Set", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Designer Fabrics", image: "https://images.unsplash.com/photo-1519915212116-7cfef71f1d3e?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Cotton Yarn", image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Denim Jeans", image: "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=300&q=80", link: "/more/textile-export" },
+        { name: "Curtain Fabrics", image: "https://images.unsplash.com/photo-1616627177346-84a6417e5e8c?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Towel Sets", image: "https://images.unsplash.com/photo-1505731078156-2e8c0bd42621?auto=format&fit=crop&w=300&q=80", link: "/products" },
+        { name: "Wool Blankets", image: "https://images.unsplash.com/photo-1519643381401-22c77e60520e?auto=format&fit=crop&w=300&q=80", link: "/products" },
+      ],
     },
     {
       icon: Package,
@@ -496,7 +538,7 @@ startxref
           {/* Product Categories */}
           <div className="grid lg:grid-cols-2 gap-16 mb-24">
             {categories.map((category, index) => (
-              <div key={index} className="group cursor-pointer relative">
+              <div key={index} className="relative">
                 <div className="relative bg-gray-800/50 border border-ai-primary/20 rounded-3xl shadow-2xl overflow-hidden hover:shadow-4xl transition-all duration-700 hover:-translate-y-4">
                   {/* Badge */}
                   <div className="absolute top-6 left-6 z-20">
@@ -559,25 +601,73 @@ startxref
                     
                     {/* Action Buttons */}
                     <div className="flex gap-4">
-                      <Link to="/inquiry" className="flex-1">
-                        <Button className={`w-full bg-gradient-to-r ${category.gradient} text-white font-bold py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group/btn`}>
-                          <span className="flex items-center justify-center">
-                            Get Quote
-                            <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                          </span>
+                      <Button 
+                        onClick={() => toggleCategory(category.name)}
+                        className={`flex-1 bg-gradient-to-r ${category.gradient} text-white font-bold py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300`}
+                      >
+                        <span className="flex items-center justify-center">
+                          View Products
+                          {expandedCategory === category.name ? (
+                            <ChevronUp className="ml-2 h-5 w-5 transition-transform duration-300" />
+                          ) : (
+                            <ChevronDown className="ml-2 h-5 w-5 transition-transform duration-300" />
+                          )}
+                        </span>
+                      </Button>
+                      
+                      <Link to="/inquiry">
+                        <Button 
+                          variant="outline" 
+                          className="px-8 py-4 border-2 border-ai-primary/50 text-ai-primary hover:bg-ai-primary/10 hover:border-ai-primary rounded-2xl font-bold transform hover:scale-105 transition-all duration-300"
+                        >
+                          <MessageCircle className="h-5 w-5" />
                         </Button>
                       </Link>
-                      
-                      <Button 
-                        variant="outline" 
-                        className="px-8 py-4 border-2 border-ai-primary/50 text-ai-primary hover:bg-ai-primary/10 hover:border-ai-primary rounded-2xl font-bold transform hover:scale-105 transition-all duration-300"
-                        onClick={() => alert(`Viewing details for ${category.name}`)}
-                      >
-                        <Eye className="h-5 w-5" />
-                      </Button>
                     </div>
                   </div>
                 </div>
+
+                {/* Collapsible Products Section */}
+                {expandedCategory === category.name && category.products && (
+                  <div className="mt-6 bg-gray-800/30 border border-ai-primary/10 rounded-3xl p-8 animate-in slide-in-from-top-4 duration-500">
+                    <h4 className="text-2xl font-bold text-white mb-6 flex items-center">
+                      <Package className="h-6 w-6 mr-3 text-ai-primary" />
+                      Available Products
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {category.products.map((product, prodIndex) => (
+                        <Link key={prodIndex} to={product.link} className="group/product">
+                          <Card className="bg-gray-900/50 border-ai-primary/20 hover:border-ai-primary/50 transition-all duration-300 overflow-hidden hover:shadow-lg hover:-translate-y-1">
+                            <CardContent className="p-0">
+                              <div className="relative h-48 overflow-hidden">
+                                <img 
+                                  src={product.image} 
+                                  alt={product.name}
+                                  className="w-full h-full object-cover group-hover/product:scale-110 transition-transform duration-500"
+                                  loading="lazy"
+                                  onError={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.src = 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=300&q=80';
+                                  }}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                              </div>
+                              <div className="p-4">
+                                <h5 className="text-white font-bold text-lg group-hover/product:text-ai-primary transition-colors">
+                                  {product.name}
+                                </h5>
+                                <div className="flex items-center mt-2 text-ai-primary text-sm font-semibold">
+                                  Learn More
+                                  <ArrowRight className="ml-1 h-4 w-4 group-hover/product:translate-x-1 transition-transform" />
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
