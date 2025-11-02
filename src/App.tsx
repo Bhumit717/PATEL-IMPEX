@@ -16,7 +16,6 @@ import Logo from "./pages/Logo";
 import FAQ from "./pages/FAQ";
 import SEO from "./pages/SEO";
 import More from "./pages/More";
-// import Sitemap from "./pages/Sitemap"; // removed - serving static XML
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -87,6 +86,60 @@ import AlmondExport from "./pages/more/AlmondExport";
 import SesameSeedsExport from "./pages/more/SesameSeedsExport";
 import SunflowerSeedsExport from "./pages/more/SunflowerSeedsExport";
 
+// Product Pages
+import OrganicPesticidesExport from "./pages/products/OrganicPesticidesExport";
+import BioFertilizersExport from "./pages/products/BioFertilizersExport";
+import VeterinaryMedicinesExport from "./pages/products/VeterinaryMedicinesExport";
+import HealthCapsulesExport from "./pages/products/HealthCapsulesExport";
+import DiagnosticKitsExport from "./pages/products/DiagnosticKitsExport";
+import HerbalSupplementsExport from "./pages/products/HerbalSupplementsExport";
+import MedicalGlovesExport from "./pages/products/MedicalGlovesExport";
+import MiniTractorExport from "./pages/products/MiniTractorExport";
+import CombineHarvesterExport from "./pages/products/CombineHarvesterExport";
+import DripIrrigationExport from "./pages/products/DripIrrigationExport";
+import CultivatorExport from "./pages/products/CultivatorExport";
+import SprinklerSystemExport from "./pages/products/SprinklerSystemExport";
+import SeedingMachineExport from "./pages/products/SeedingMachineExport";
+import PowerTillerExport from "./pages/products/PowerTillerExport";
+import ThresherExport from "./pages/products/ThresherExport";
+import FarmTrailerExport from "./pages/products/FarmTrailerExport";
+import HandToolsExport from "./pages/products/HandToolsExport";
+import CNCMachineExport from "./pages/products/CNCMachineExport";
+import PowerDrillSetExport from "./pages/products/PowerDrillSetExport";
+import IndustrialMotorExport from "./pages/products/IndustrialMotorExport";
+import EnginePartsExport from "./pages/products/EnginePartsExport";
+import SteelSheetsExport from "./pages/products/SteelSheetsExport";
+import WeldingMachineExport from "./pages/products/WeldingMachineExport";
+import HydraulicPressExport from "./pages/products/HydraulicPressExport";
+import BallBearingsExport from "./pages/products/BallBearingsExport";
+import HardwareFittingsExport from "./pages/products/HardwareFittingsExport";
+import ConveyorBeltExport from "./pages/products/ConveyorBeltExport";
+import StorageContainersExport from "./pages/products/StorageContainersExport";
+import PackagingBoxesExport from "./pages/products/PackagingBoxesExport";
+import IndustrialPipesExport from "./pages/products/IndustrialPipesExport";
+import HouseholdBucketsExport from "./pages/products/HouseholdBucketsExport";
+import MedicalContainersExport from "./pages/products/MedicalContainersExport";
+import AutomotiveBumpersExport from "./pages/products/AutomotiveBumpersExport";
+import PlasticBottlesExport from "./pages/products/PlasticBottlesExport";
+import FoodContainersExport from "./pages/products/FoodContainersExport";
+import PlasticSheetsExport from "./pages/products/PlasticSheetsExport";
+import MoldedPartsExport from "./pages/products/MoldedPartsExport";
+import BedLinenExport from "./pages/products/BedLinenExport";
+import DesignerFabricsExport from "./pages/products/DesignerFabricsExport";
+import CottonYarnExport from "./pages/products/CottonYarnExport";
+import CurtainsExport from "./pages/products/CurtainsExport";
+import TowelSetsExport from "./pages/products/TowelSetsExport";
+import WoolBlanketsExport from "./pages/products/WoolBlanketsExport";
+import SpicePicklesExport from "./pages/products/SpicePicklesExport";
+import ReadyMealsExport from "./pages/products/ReadyMealsExport";
+import SnackPacketsExport from "./pages/products/SnackPacketsExport";
+import DairyGheeExport from "./pages/products/DairyGheeExport";
+import SilverEarringsExport from "./pages/products/SilverEarringsExport";
+import PearlJewelryExport from "./pages/products/PearlJewelryExport";
+import BrassStatuesExport from "./pages/products/BrassStatuesExport";
+import WallHangingsExport from "./pages/products/WallHangingsExport";
+import DecorativeLampsExport from "./pages/products/DecorativeLampsExport";
+
 // SEO Pages
 import USAMarketExport from "./pages/seo/USAMarketExport";
 import UKMarketExport from "./pages/seo/UKMarketExport";
@@ -154,6 +207,74 @@ import MacadamiaExport from "./pages/seo/MacadamiaExport";
 import BrazilNutExport from "./pages/seo/BrazilNutExport";
 import RaisinsExport from "./pages/seo/RaisinsExport";
 import DatesExport from "./pages/seo/DatesExport";
+import AlgeriaMarketExport from "./pages/seo/AlgeriaMarketExport";
+import AngolaMarketExport from "./pages/seo/AngolaMarketExport";
+import ArgentinaMarketExport from "./pages/seo/ArgentinaMarketExport";
+import AzerbaijanMarketExport from "./pages/seo/AzerbaijanMarketExport";
+import BahrainMarketExport from "./pages/seo/BahrainMarketExport";
+import BangladeshMarketExport from "./pages/seo/BangladeshMarketExport";
+import BelarusMarketExport from "./pages/seo/BelarusMarketExport";
+import BoliviaMarketExport from "./pages/seo/BoliviaMarketExport";
+import BotswanaMarketExport from "./pages/seo/BotswanaMarketExport";
+import BrazilMarketExport from "./pages/seo/BrazilMarketExport";
+import BruneiMarketExport from "./pages/seo/BruneiMarketExport";
+import BulgariaMarketExport from "./pages/seo/BulgariaMarketExport";
+import CambodiaMarketExport from "./pages/seo/CambodiaMarketExport";
+import CameroonMarketExport from "./pages/seo/CameroonMarketExport";
+import ChileMarketExport from "./pages/seo/ChileMarketExport";
+import ChinaMarketExport from "./pages/seo/ChinaMarketExport";
+import ColombiaMarketExport from "./pages/seo/ColombiaMarketExport";
+import CroatiaMarketExport from "./pages/seo/CroatiaMarketExport";
+import CubaMarketExport from "./pages/seo/CubaMarketExport";
+import CyprusMarketExport from "./pages/seo/CyprusMarketExport";
+import CzechMarketExport from "./pages/seo/CzechMarketExport";
+import DenmarkMarketExport from "./pages/seo/DenmarkMarketExport";
+import DominicanRepublicMarketExport from "./pages/seo/DominicanRepublicMarketExport";
+import EcuadorMarketExport from "./pages/seo/EcuadorMarketExport";
+import EgyptMarketExport from "./pages/seo/EgyptMarketExport";
+import EstoniaMarketExport from "./pages/seo/EstoniaMarketExport";
+import EthiopiaMarketExport from "./pages/seo/EthiopiaMarketExport";
+import FinlandMarketExport from "./pages/seo/FinlandMarketExport";
+import GabonMarketExport from "./pages/seo/GabonMarketExport";
+import GambiaMarketExport from "./pages/seo/GambiaMarketExport";
+import GeorgiaMarketExport from "./pages/seo/GeorgiaMarketExport";
+import GhanaMarketExport from "./pages/seo/GhanaMarketExport";
+import GreeceMarketExport from "./pages/seo/GreeceMarketExport";
+import GuatemalaMarketExport from "./pages/seo/GuatemalaMarketExport";
+import GuineaMarketExport from "./pages/seo/GuineaMarketExport";
+import HondurasMarketExport from "./pages/seo/HondurasMarketExport";
+import HungaryMarketExport from "./pages/seo/HungaryMarketExport";
+import IcelandMarketExport from "./pages/seo/IcelandMarketExport";
+import IndonesiaMarketExport from "./pages/seo/IndonesiaMarketExport";
+import IraqMarketExport from "./pages/seo/IraqMarketExport";
+import IrelandMarketExport from "./pages/seo/IrelandMarketExport";
+import IsraelMarketExport from "./pages/seo/IsraelMarketExport";
+import IvoryCoastMarketExport from "./pages/seo/IvoryCoastMarketExport";
+import JamaicaMarketExport from "./pages/seo/JamaicaMarketExport";
+import JordanMarketExport from "./pages/seo/JordanMarketExport";
+import KazakhstanMarketExport from "./pages/seo/KazakhstanMarketExport";
+import KenyaMarketExport from "./pages/seo/KenyaMarketExport";
+import KuwaitMarketExport from "./pages/seo/KuwaitMarketExport";
+import KyrgyzstanMarketExport from "./pages/seo/KyrgyzstanMarketExport";
+import LaosMarketExport from "./pages/seo/LaosMarketExport";
+import LatviaMarketExport from "./pages/seo/LatviaMarketExport";
+import LebanonMarketExport from "./pages/seo/LebanonMarketExport";
+import MalaysiaMarketExport from "./pages/seo/MalaysiaMarketExport";
+import MexicoMarketExport from "./pages/seo/MexicoMarketExport";
+import MyanmarMarketExport from "./pages/seo/MyanmarMarketExport";
+import NepalMarketExport from "./pages/seo/NepalMarketExport";
+import NigeriaMarketExport from "./pages/seo/NigeriaMarketExport";
+import PakistanMarketExport from "./pages/seo/PakistanMarketExport";
+import PeruMarketExport from "./pages/seo/PeruMarketExport";
+import PhilippinesMarketExport from "./pages/seo/PhilippinesMarketExport";
+import RussiaMarketExport from "./pages/seo/RussiaMarketExport";
+import SouthAfricaMarketExport from "./pages/seo/SouthAfricaMarketExport";
+import SouthKoreaMarketExport from "./pages/seo/SouthKoreaMarketExport";
+import SriLankaMarketExport from "./pages/seo/SriLankaMarketExport";
+import ThailandMarketExport from "./pages/seo/ThailandMarketExport";
+import TurkeyMarketExport from "./pages/seo/TurkeyMarketExport";
+import VietnamMarketExport from "./pages/seo/VietnamMarketExport";
+
 
 const queryClient = new QueryClient();
 
@@ -319,6 +440,128 @@ const App = () => (
           <Route path="/seo/brazil-nut-export" element={<BrazilNutExport />} />
           <Route path="/seo/raisins-export" element={<RaisinsExport />} />
           <Route path="/seo/dates-export" element={<DatesExport />} />
+          <Route path="/seo/algeria-market-export" element={<AlgeriaMarketExport />} />
+          <Route path="/seo/angola-market-export" element={<AngolaMarketExport />} />
+          <Route path="/seo/argentina-market-export" element={<ArgentinaMarketExport />} />
+          <Route path="/seo/azerbaijan-market-export" element={<AzerbaijanMarketExport />} />
+          <Route path="/seo/bahrain-market-export" element={<BahrainMarketExport />} />
+          <Route path="/seo/bangladesh-market-export" element={<BangladeshMarketExport />} />
+          <Route path="/seo/belarus-market-export" element={<BelarusMarketExport />} />
+          <Route path="/seo/bolivia-market-export" element={<BoliviaMarketExport />} />
+          <Route path="/seo/botswana-market-export" element={<BotswanaMarketExport />} />
+          <Route path="/seo/brazil-market-export" element={<BrazilMarketExport />} />
+          <Route path="/seo/brunei-market-export" element={<BruneiMarketExport />} />
+          <Route path="/seo/bulgaria-market-export" element={<BulgariaMarketExport />} />
+          <Route path="/seo/cambodia-market-export" element={<CambodiaMarketExport />} />
+          <Route path="/seo/cameroon-market-export" element={<CameroonMarketExport />} />
+          <Route path="/seo/chile-market-export" element={<ChileMarketExport />} />
+          <Route path="/seo/china-market-export" element={<ChinaMarketExport />} />
+          <Route path="/seo/colombia-market-export" element={<ColombiaMarketExport />} />
+          <Route path="/seo/croatia-market-export" element={<CroatiaMarketExport />} />
+          <Route path="/seo/cuba-market-export" element={<CubaMarketExport />} />
+          <Route path="/seo/cyprus-market-export" element={<CyprusMarketExport />} />
+          <Route path="/seo/czech-market-export" element={<CzechMarketExport />} />
+          <Route path="/seo/denmark-market-export" element={<DenmarkMarketExport />} />
+          <Route path="/seo/dominican-republic-market-export" element={<DominicanRepublicMarketExport />} />
+          <Route path="/seo/ecuador-market-export" element={<EcuadorMarketExport />} />
+          <Route path="/seo/egypt-market-export" element={<EgyptMarketExport />} />
+          <Route path="/seo/estonia-market-export" element={<EstoniaMarketExport />} />
+          <Route path="/seo/ethiopia-market-export" element={<EthiopiaMarketExport />} />
+          <Route path="/seo/finland-market-export" element={<FinlandMarketExport />} />
+          <Route path="/seo/gabon-market-export" element={<GabonMarketExport />} />
+          <Route path="/seo/gambia-market-export" element={<GambiaMarketExport />} />
+          <Route path="/seo/georgia-market-export" element={<GeorgiaMarketExport />} />
+          <Route path="/seo/ghana-market-export" element={<GhanaMarketExport />} />
+          <Route path="/seo/greece-market-export" element={<GreeceMarketExport />} />
+          <Route path="/seo/guatemala-market-export" element={<GuatemalaMarketExport />} />
+          <Route path="/seo/guinea-market-export" element={<GuineaMarketExport />} />
+          <Route path="/seo/honduras-market-export" element={<HondurasMarketExport />} />
+          <Route path="/seo/hungary-market-export" element={<HungaryMarketExport />} />
+          <Route path="/seo/iceland-market-export" element={<IcelandMarketExport />} />
+          <Route path="/seo/indonesia-market-export" element={<IndonesiaMarketExport />} />
+          <Route path="/seo/iraq-market-export" element={<IraqMarketExport />} />
+          <Route path="/seo/ireland-market-export" element={<IrelandMarketExport />} />
+          <Route path="/seo/israel-market-export" element={<IsraelMarketExport />} />
+          <Route path="/seo/ivory-coast-market-export" element={<IvoryCoastMarketExport />} />
+          <Route path="/seo/jamaica-market-export" element={<JamaicaMarketExport />} />
+          <Route path="/seo/jordan-market-export" element={<JordanMarketExport />} />
+          <Route path="/seo/kazakhstan-market-export" element={<KazakhstanMarketExport />} />
+          <Route path="/seo/kenya-market-export" element={<KenyaMarketExport />} />
+          <Route path="/seo/kuwait-market-export" element={<KuwaitMarketExport />} />
+          <Route path="/seo/kyrgyzstan-market-export" element={<KyrgyzstanMarketExport />} />
+          <Route path="/seo/laos-market-export" element={<LaosMarketExport />} />
+          <Route path="/seo/latvia-market-export" element={<LatviaMarketExport />} />
+          <Route path="/seo/lebanon-market-export" element={<LebanonMarketExport />} />
+          <Route path="/seo/malaysia-market-export" element={<MalaysiaMarketExport />} />
+          <Route path="/seo/mexico-market-export" element={<MexicoMarketExport />} />
+          <Route path="/seo/myanmar-market-export" element={<MyanmarMarketExport />} />
+          <Route path="/seo/nepal-market-export" element={<NepalMarketExport />} />
+          <Route path="/seo/nigeria-market-export" element={<NigeriaMarketExport />} />
+          <Route path="/seo/pakistan-market-export" element={<PakistanMarketExport />} />
+          <Route path="/seo/peru-market-export" element={<PeruMarketExport />} />
+          <Route path="/seo/philippines-market-export" element={<PhilippinesMarketExport />} />
+          <Route path="/seo/russia-market-export" element={<RussiaMarketExport />} />
+          <Route path="/seo/south-africa-market-export" element={<SouthAfricaMarketExport />} />
+          <Route path="/seo/south-korea-market-export" element={<SouthKoreaMarketExport />} />
+          <Route path="/seo/sri-lanka-market-export" element={<SriLankaMarketExport />} />
+          <Route path="/seo/thailand-market-export" element={<ThailandMarketExport />} />
+          <Route path="/seo/turkey-market-export" element={<TurkeyMarketExport />} />
+          <Route path="/seo/vietnam-market-export" element={<VietnamMarketExport />} />
+
+          
+          {/* Product Pages */}
+          <Route path="/products/organic-pesticides-export" element={<OrganicPesticidesExport />} />
+          <Route path="/products/bio-fertilizers-export" element={<BioFertilizersExport />} />
+          <Route path="/products/veterinary-medicines-export" element={<VeterinaryMedicinesExport />} />
+          <Route path="/products/health-capsules-export" element={<HealthCapsulesExport />} />
+          <Route path="/products/diagnostic-kits-export" element={<DiagnosticKitsExport />} />
+          <Route path="/products/herbal-supplements-export" element={<HerbalSupplementsExport />} />
+          <Route path="/products/medical-gloves-export" element={<MedicalGlovesExport />} />
+          <Route path="/products/mini-tractor-export" element={<MiniTractorExport />} />
+          <Route path="/products/combine-harvester-export" element={<CombineHarvesterExport />} />
+          <Route path="/products/drip-irrigation-export" element={<DripIrrigationExport />} />
+          <Route path="/products/cultivator-export" element={<CultivatorExport />} />
+          <Route path="/products/sprinkler-system-export" element={<SprinklerSystemExport />} />
+          <Route path="/products/seeding-machine-export" element={<SeedingMachineExport />} />
+          <Route path="/products/power-tiller-export" element={<PowerTillerExport />} />
+          <Route path="/products/thresher-export" element={<ThresherExport />} />
+          <Route path="/products/farm-trailer-export" element={<FarmTrailerExport />} />
+          <Route path="/products/hand-tools-export" element={<HandToolsExport />} />
+          <Route path="/products/cnc-machine-export" element={<CNCMachineExport />} />
+          <Route path="/products/power-drill-set-export" element={<PowerDrillSetExport />} />
+          <Route path="/products/industrial-motor-export" element={<IndustrialMotorExport />} />
+          <Route path="/products/engine-parts-export" element={<EnginePartsExport />} />
+          <Route path="/products/steel-sheets-export" element={<SteelSheetsExport />} />
+          <Route path="/products/welding-machine-export" element={<WeldingMachineExport />} />
+          <Route path="/products/hydraulic-press-export" element={<HydraulicPressExport />} />
+          <Route path="/products/ball-bearings-export" element={<BallBearingsExport />} />
+          <Route path="/products/hardware-fittings-export" element={<HardwareFittingsExport />} />
+          <Route path="/products/conveyor-belt-export" element={<ConveyorBeltExport />} />
+          <Route path="/products/storage-containers-export" element={<StorageContainersExport />} />
+          <Route path="/products/packaging-boxes-export" element={<PackagingBoxesExport />} />
+          <Route path="/products/industrial-pipes-export" element={<IndustrialPipesExport />} />
+          <Route path="/products/household-buckets-export" element={<HouseholdBucketsExport />} />
+          <Route path="/products/medical-containers-export" element={<MedicalContainersExport />} />
+          <Route path="/products/automotive-bumpers-export" element={<AutomotiveBumpersExport />} />
+          <Route path="/products/plastic-bottles-export" element={<PlasticBottlesExport />} />
+          <Route path="/products/food-containers-export" element={<FoodContainersExport />} />
+          <Route path="/products/plastic-sheets-export" element={<PlasticSheetsExport />} />
+          <Route path="/products/molded-parts-export" element={<MoldedPartsExport />} />
+          <Route path="/products/bed-linen-export" element={<BedLinenExport />} />
+          <Route path="/products/designer-fabrics-export" element={<DesignerFabricsExport />} />
+          <Route path="/products/cotton-yarn-export" element={<CottonYarnExport />} />
+          <Route path="/products/curtains-export" element={<CurtainsExport />} />
+          <Route path="/products/towel-sets-export" element={<TowelSetsExport />} />
+          <Route path="/products/wool-blankets-export" element={<WoolBlanketsExport />} />
+          <Route path="/products/spice-pickles-export" element={<SpicePicklesExport />} />
+          <Route path="/products/ready-meals-export" element={<ReadyMealsExport />} />
+          <Route path="/products/snack-packets-export" element={<SnackPacketsExport />} />
+          <Route path="/products/dairy-ghee-export" element={<DairyGheeExport />} />
+          <Route path="/products/silver-earrings-export" element={<SilverEarringsExport />} />
+          <Route path="/products/pearl-jewelry-export" element={<PearlJewelryExport />} />
+          <Route path="/products/brass-statues-export" element={<BrassStatuesExport />} />
+          <Route path="/products/wall-hangings-export" element={<WallHangingsExport />} />
+          <Route path="/products/decorative-lamps-export" element={<DecorativeLampsExport />} />
           
           {/* Legal Pages */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
