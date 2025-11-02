@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Shirt, TrendingUp, Globe, Award, Users, Target } from "lucide-react";
-import textileImage from "@/assets/agricultural-export-processing.jpg";
+import textileImage from "@/assets/textile-export-warehouse.jpg";
 
 const TextileExport = () => {
   const textileProducts = [
