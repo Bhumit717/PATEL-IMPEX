@@ -32,9 +32,8 @@ const More = () => {
         { title: "Rice Export", slug: "rice-export", description: "Premium rice varieties for export" },
         { title: "Spices Export", slug: "spices-export", description: "Authentic Indian spices worldwide" },
         { title: "Agricultural Products", slug: "agricultural-products", description: "Farm-fresh agricultural exports" },
-        { title: "Basmati Rice", slug: "basmati-rice", description: "World's finest basmati rice" },
-        { title: "Non Basmati Rice", slug: "non-basmati-rice", description: "Quality non-basmati varieties" },
-        { title: "Organic Products", slug: "organic-products", description: "Certified organic exports" }
+        { title: "Basmati Rice", slug: "basmati-rice-export", description: "World's finest basmati rice" },
+        { title: "Non Basmati Rice", slug: "non-basmati-rice-export", description: "Quality non-basmati varieties" },
       ]
     },
     {
@@ -46,7 +45,7 @@ const More = () => {
       pages: [
         { title: "Asian Markets", slug: "asian-markets", description: "Trading opportunities in Asia" },
         { title: "European Markets", slug: "european-markets", description: "Export to European countries" },
-        { title: "Middle East Trade", slug: "middle-east-trade", description: "Middle Eastern market insights" },
+        { title: "Middle East Markets", slug: "middle-east-markets", description: "Middle Eastern market insights" },
         { title: "African Markets", slug: "african-markets", description: "Growing African trade opportunities" },
         { title: "American Markets", slug: "american-markets", description: "North and South American trade" },
         { title: "Oceania Trade", slug: "oceania-trade", description: "Australia and Pacific markets" }
