@@ -139,6 +139,7 @@ import PearlJewelryExport from "./pages/products/PearlJewelryExport";
 import BrassStatuesExport from "./pages/products/BrassStatuesExport";
 import WallHangingsExport from "./pages/products/WallHangingsExport";
 import DecorativeLampsExport from "./pages/products/DecorativeLampsExport";
+import FashionJewelryExport from "./pages/products/FashionJewelryExport";
 
 // SEO Pages
 import USAMarketExport from "./pages/seo/USAMarketExport";
@@ -562,6 +563,7 @@ const App = () => (
           <Route path="/products/brass-statues-export" element={<BrassStatuesExport />} />
           <Route path="/products/wall-hangings-export" element={<WallHangingsExport />} />
           <Route path="/products/decorative-lamps-export" element={<DecorativeLampsExport />} />
+          <Route path="/products/fashion-jewelry-export" element={<FashionJewelryExport />} />
           
           {/* Legal Pages */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
